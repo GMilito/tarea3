@@ -18,9 +18,29 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// Spring Boot Starter Web para desarrollar aplicaciones web y RESTful APIs
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Spring Boot Starter Data JPA para trabajar con JPA y Hibernate
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // Spring Boot Starter Security para agregar soporte de autenticación y autorización
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // MySQL Connector para conectarse a una base de datos MySQL
+    runtimeOnly 'mysql:mysql-connector-java'
+
+    // Spring Boot Starter Test para pruebas unitarias e integración
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+
+    // Librerías adicionales de seguridad y utilidades
+    implementation 'org.springframework.security:spring-security-core'
+    implementation 'org.springframework.security:spring-security-config'
+    implementation 'org.springframework.security:spring-security-web'
+
+    // Biblioteca de encriptación BCrypt
+    implementation 'org.springframework.security:spring-security-crypto'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
